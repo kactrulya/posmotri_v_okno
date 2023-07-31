@@ -42,7 +42,7 @@ ol {
   justify-content: center;
   flex-direction: row;
   align-items: flex-end;
-  max-width: 1200px;
+  width: 100%;
   margin: 133px 0;
   gap: 30px;
 }
@@ -107,7 +107,7 @@ ol {
 }
 
 .search-form__label-text {
-  color: rgba(255, 255, 255, 0.70);
+  color: #fff;
   font-family: Fira Sans Condensed;
   font-size: 18px;
   font-style: normal;
