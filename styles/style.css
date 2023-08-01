@@ -44,6 +44,7 @@ ol {
   align-items: flex-end;
   width: 100%;
   margin: 133px 0;
+  padding: 0 30px;
   gap: 30px;
 }
 
@@ -57,7 +58,7 @@ ol {
 .content__list {
   block-size: 300px;
   overflow-y: auto;
-  margin-top: 20px;
+  margin-top: 26px;
   position: relative;
 }
 
@@ -79,7 +80,7 @@ ol {
 }
 
 .content__list-item:not(:last-child) {
-  margin-bottom: 20px;
+  margin-bottom: 30px;
 }
 
 .content__video-card {
@@ -92,9 +93,13 @@ ol {
   width: 194px;
   height: 103px;
   object-fit: cover;
+  object-position: top right;
 }
 
 .content__video-card-description-container {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
   flex: 1;
 }
 
@@ -108,7 +113,7 @@ ol {
 
 .search-form__label-text {
   color: #fff;
-  font-family: Fira Sans Condensed;
+  font-family: "Fira Sans Condensed", Arial, sans-serif;
   font-size: 18px;
   font-style: normal;
   font-weight: 400;
@@ -116,15 +121,15 @@ ol {
 }
 
 .search-form__textfield {
-  color: rgba(255, 255, 255, 0.70);
-  font-family: Fira Sans Condensed;
+  color: rgba(255, 255, 255, 1);
+  font-family: "Fira Sans Condensed", Arial, sans-serif;
   font-size: 18px;
   font-style: normal;
   font-weight: 400;
   line-height: normal;
   display: flex;
-  width: 225px;
-  height: 27px;
+  min-width: 225px;
+  min-height: 27px;
   align-items: center;
   gap: 10px;
   border-top: 1px solid #FFF;
@@ -136,7 +141,7 @@ ol {
 
 .title {
   color: #FFF;
-  font-family: Oswald;
+  font-family: "Oswald", Arial, sans-serif;
   font-size: 75px;
   font-style: normal;
   font-weight: 700;
@@ -146,7 +151,7 @@ ol {
 
 .content__accent {
   color: #545050;
-  font-family: Oswald;
+  font-family: "Oswald", Arial, sans-serif;
   font-size: 75px;
   font-style: normal;
   font-weight: 700;
@@ -163,7 +168,7 @@ ol {
 
 .content__video-card-title {
   color: #FFF;
-  font-family: Oswald;
+  font-family: "Oswald", Arial, sans-serif;
   font-size: 30px;
   font-style: normal;
   font-weight: 700;
@@ -173,7 +178,7 @@ ol {
 
 .content__video-card-description {
   color: #FFF;
-  font-family: Fira Sans Condensed;
+  font-family: "Fira Sans Condensed", Arial, sans-serif;
   font-size: 18px;
   font-style: normal;
   font-weight: 400;
@@ -199,17 +204,19 @@ ol {
 }
 
 .search-form__label {
-  display: inline-block;
+  display: flex;
   width: fit-content;
   cursor: pointer;
+  gap: 5px;
 }
 
 .search-form__checkbox-list {
-  display: inline;
+  display: flex;
+  gap: 15px;
 }
 
-.search-form__pseudo-checkbox {
-  display: inline-block;
+.search-form__checkbox {
+  display: flex;
   width: 19px;
   height: 19px;
   border: 1px solid #FFF;
@@ -226,7 +233,7 @@ ol {
   background-color: transparent;
   color: #FFF;
   text-align: center;
-  font-family: Fira Sans Condensed;
+  font-family: "Fira Sans Condensed", Arial, sans-serif;
   font-size: 18px;
   font-style: normal;
   font-weight: 700;
@@ -234,13 +241,13 @@ ol {
 }
 
 .search-form__submit-button {
-  width: 194px;
-  height: 34px;
+  min-width: 194px;
+  min-height: 34px;
 }
 
 .more-button {
   width: 100%;
-  height: 34px;
+  min-height: 34px;
 }
 
 .search-form__textfield:focus {
@@ -251,41 +258,40 @@ ol {
   outline: 1px solid #fff;
 }
 
-.search-form__checkbox:checked + .search-form__pseudo-checkbox::before {
-  content: "";
-  display: block;
-  width: 15px;
-  height: 15px;
-  background-color: #FFF;
-  position: relative;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  z-index: 1;
+.search-form__pseudo-checkbox {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 19px; 
+  height: 19px; 
+  border: 1px solid #fff; 
 }
 
-.search-form__pseudo-checkbox {
-  position: relative;
-  width: 20px;
-  height: 20px;
-  border: 1px solid #fff;
-  display: inline-block;
+.search-form__checkbox:checked + .search-form__pseudo-checkbox::before {
+  content: ""; 
+  display: block; 
+  width: 15px; 
+  height: 15px; 
+  background-color: #FFF; 
 }
 
 .button:hover {
   cursor: pointer;
+  text-decoration: underline;
 }
 
 .button:active {
   cursor: pointer;
+  background: #545050;
+
 }
 
 .button:focus {
   outline: none;
 }
 
-.content__card-link_current {
-  
+.content__card-link_current:active {
+  background: #545050;
 }
 
 .content__card-link_current:focus {
