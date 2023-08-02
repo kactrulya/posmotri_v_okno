@@ -60,6 +60,7 @@ ol {
   overflow-y: auto;
   margin-top: 26px;
   position: relative;
+  padding: 2px;
 }
 
 .content__details {
@@ -163,7 +164,7 @@ ol {
   display: block;
   text-decoration: none;
   color: #FFF;
-  margin: 2px;
+  padding: 2px;
 }
 
 .content__video-card-title {
@@ -208,6 +209,10 @@ ol {
   width: fit-content;
   cursor: pointer;
   gap: 5px;
+}
+
+.search-form__label-text:hover {
+  text-decoration: underline;
 }
 
 .search-form__checkbox-list {
@@ -275,6 +280,10 @@ ol {
   background-color: #FFF; 
 }
 
+.content__list-item:hover {
+  text-decoration: underline;
+}
+
 .button:hover {
   cursor: pointer;
   text-decoration: underline;
@@ -292,6 +301,8 @@ ol {
 
 .content__card-link_current:active {
   background: #545050;
+  width: 394px;
+  padding: 2px;
 }
 
 .content__card-link_current:focus {
