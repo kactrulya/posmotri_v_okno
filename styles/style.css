@@ -280,10 +280,6 @@ ol {
   background-color: #FFF; 
 }
 
-.content__list-item:hover {
-  text-decoration: underline;
-}
-
 .button:hover {
   cursor: pointer;
   text-decoration: underline;
@@ -292,6 +288,7 @@ ol {
 .button:active {
   cursor: pointer;
   background: #545050;
+  text-decoration: none;
 
 }
 
@@ -299,10 +296,15 @@ ol {
   outline: none;
 }
 
+.content__card-link:hover {
+  text-decoration: underline;
+}
+
 .content__card-link_current:active {
   background: #545050;
   width: 394px;
   padding: 2px;
+  text-decoration: none;
 }
 
 .content__card-link_current:focus {
