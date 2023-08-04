@@ -300,9 +300,8 @@ ol {
   text-decoration: underline;
 }
 
-.content__card-link_current:active {
+.content__card-link_current {
   background: #545050;
-  width: 394px;
   padding: 2px;
   text-decoration: none;
 }
